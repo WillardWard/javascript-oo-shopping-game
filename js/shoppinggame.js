@@ -257,13 +257,9 @@ function loadMasterData() {
 
 // Complete this function
 const findProductById = (id) => {
-  let prod = new Product();
-
-  if (prod.id === id) {
-    return true;
-  } else {
-    return false;
-  }
+  return function (product) {
+    return product.id == id;
+  };
 };
 
 // Complete this function
