@@ -256,10 +256,20 @@ function loadMasterData() {
 }
 
 // Complete this function
-const findProductById = (id) => {};
+const findProductById = (id) => {
+  let prod = new Product();
+
+  if (prod.id === id) {
+    return true;
+  } else {
+    return false;
+  }
+};
 
 // Complete this function
-const generateProductId = () => {};
+const generateProductId = () => {
+  return Math.floor(Math.random() * 20 + 1);
+};
 
 const getProduct = (prodList, pId) => {
   return prodList.find(findProductById(pId));
