@@ -360,8 +360,9 @@ function start(data) {
 const shop = (prodList, tBill, lastProd) => {
   let totalBill = tBill;
   const prId = generateProductId();
-  let product =
-    Object.is(lastProd) == undefined ? getProduct(prodList, prId) : lastProd; // Assign the value of product here
+  let product = Object.is(lastProd, undefined)
+    ? getProduct(prodList, prId)
+    : lastProd; // Assign the value of product here
   let productDetails = product.getDetails(); // Assign the value of productDetails here
 
   rl.question(
